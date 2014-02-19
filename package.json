@@ -1,0 +1,33 @@
+{
+  "name": "mtg",
+  "version": "0.0.1",
+  "description": "mtg game",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://joticd@github.com/joticd/mtg"
+  },
+  "keywords": [
+    "nodejs",
+    "template",
+    "quickstart"
+  ],
+  "dependencies": {
+    "monk": "*",
+    "socket.io": "*",
+    "express": "3.x",
+    "less-middleware": "*",
+    "recaptcha": "*",
+    "jade": "*",
+    "html5-entities": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "zombie": "*",
+    "q": "*"
+  },
+  "author": "joticd"
+}
