@@ -6,6 +6,15 @@ block title
 block css-plugins
 
 block js-plugins
+ script.
+  $(function() {
+   $("#load").click(function() {
+    $.post("load_cards.js", function(cards) {
+     $("#results-text").val(cards);
+    });
+   });
+  });
 
 block content
+ button(id ="load")= "Load"
  textarea(id="results-text", name="results", rows="12", cols="50", readonly="1")= "Hello" + cards
