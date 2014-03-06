@@ -6,10 +6,16 @@ block title
 block css-plugins
 
 block js-plugins
+ script(src="/socket.io/socket.io.js")
  script.
   $(function() {
+   var socket = io.connect();
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
    $("#load").click(function() {
-    $.post("load_cards.js", function(cards) {
+    $.post("load_cards", function(cards) {
      $("#results-text").val(cards);
     });
    });

@@ -1,0 +1,20 @@
+extends layout
+
+block title
+ title= "template"
+
+block css-plugins
+
+block js-plugins
+ link(rel="stylesheet", href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css")
+ script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js")
+
+block content
+ #table
+ #cardList.window
+  .title="Cards"
+  ul#list
+ #cardEntery.window
+  .title="Info"
+  include info
+  img#previewImage  

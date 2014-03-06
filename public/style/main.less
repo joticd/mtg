@@ -98,12 +98,80 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+#table {
+ background :#2A3D00;
+ position : absolute;
+ top : 0;
+ left :0;
+ bottom : 0;
+ right : 0;
+}
 
+.card {
+ transition: 0.2s;
+}
 
+.tapped {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 
+.round-corners(@size: 20px) {
+     -moz-border-radius: @size;
+    -webkit-border-radius: @size;
+    -khtml-border-radius: @size;
+    border-radius: @size;
+}
 
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
 
+.window {
+ position : absolute ;
+ z-index : 1000;
+ .round-corners(10px);
+ .box-shadow(0 0 10px, 70%);
 
+ .title {
+  font-size: 22px;
+  padding-left: 20px;
+  background: #777;
+  cursor :move;  
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  border-bottom: 2px solid #555;
+ }
+}
+
+#cardList, #cardEntery {
+ height: 300px;
+ width : 300px;
+ background : white;
+ left: 10px;
+ top: 10px;
+}
+
+#cardEntery {
+ left: 449px;
+ top: -246px;
+ display: none;
+}
+
+#list {
+ list-style-type: none;
+}
 
 
 

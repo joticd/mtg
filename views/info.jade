@@ -1,0 +1,14 @@
+section#find
+ form(action="find.action.php", method="get")
+  | Type :
+  select(name="type", id="info-type")
+   - var types = [ "", "artifact", "creature", "enchantment", "instant", "land", "sorcery" ];
+   each i in types
+    option(value=i)= i.charAt(0).toUpperCase() + i.slice(1)
+  br
+  - var fields = [ "name", "cost", "ability", "power", "toughness" ];
+  each field in fields
+   = field.charAt(0).toUpperCase() + field.slice(1) + " :"
+   input(name=field, type="text", id="info-" + field)
+   br
+  input(type="submit", value="Submit", id="info-submit")

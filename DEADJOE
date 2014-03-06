@@ -1,0 +1,27 @@
+
+*** These modified files were found in JOE when it aborted on Sun Feb 23 19:25:34 2014
+*** JOE was aborted by UNIX signal 15
+
+*** File '.git/COMMIT_EDITMSG'
+Uradjen domaci
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   load_cards.js
+#
+
+*** File '(Unnamed)'
+views/mongo.jade
+views/mongo.jade
+.git/COMMIT_EDITMSG
+mongo.js
+load_cadrs.js
+load_cards.js
+mongo.jade
+mongo.jade
+mongo.js
+load_cards.js
+.git/COMMIT_EDITMSG

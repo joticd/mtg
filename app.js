@@ -60,6 +60,7 @@ var server = http.createServer(app);
 
 if(config.usesSocketIO) {
   io = socketio.listen(server);
+  require ("./socket") (io);  
 }
 
 server.listen(app.get('port'), function() {});

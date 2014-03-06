@@ -1,5 +1,5 @@
 module.exports = {
-  port: 8004,
+  port: 8080,
   usesSocketIO: true,
   secret: "mysecret"
 }
