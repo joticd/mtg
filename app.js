@@ -5,6 +5,8 @@
 
 var config = require('./config');
 var express = require('express');
+var session = require('express-session');
+var RedisStore = require('connect-redis')(session);
 
 var routes = require('./source/routes');
 var http = require('http');
@@ -21,6 +23,7 @@ app.configure(function() {
   app.use(express.urlencoded({limit: '50mb'}));
   app.use(express.cookieParser(config.secret));
   app.use(require('less-middleware')({ src : path.join(__dirname, 'public'), compress : true }));
+  app.use(session({ store: new RedisStore, secret: config.secret }));
   app.set('port', config.port);
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'jade');

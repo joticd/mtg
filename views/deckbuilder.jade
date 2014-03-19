@@ -8,14 +8,20 @@ block css-plugins
 block js-plugins
  link(rel="stylesheet", href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css")
  script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js")
- script(src="js/board.js")
+ script(src="js/deckbuilder.js")
 
 block content
  #table
- #cardList.window
-  .title="Chest"
-  include chest
- #cardEntery.window
-  .title="Info"
-  include info
-  img#previewImage  
+ if username != null
+  #cardList.window
+   .title="Chest"
+   include chest
+  #cardEntery.window
+   .title="Info"
+   include info
+   img#previewImage  
+  #deckList.window
+   .title="Deck"
+   button#saveDeck="Save"
+   input(type="text", id="deckName")
+  include deck

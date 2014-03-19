@@ -25,3 +25,40 @@ mongo.jade
 mongo.js
 load_cards.js
 .git/COMMIT_EDITMSG
+
+*** These modified files were found in JOE when it aborted on Mon Mar 17 01:18:50 2014
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+
+*** File '* Build Log *'
+
+*** File '(Unnamed)'
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+save_deck.js
+app.js
+* Build Log *
+
+*** These modified files were found in JOE when it aborted on Mon Mar 17 01:20:24 2014
+*** JOE was aborted by UNIX signal 1
+
+*** File '(Unnamed)'
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+public/js/deckbuilder.js
+save_deck.js
+app.js

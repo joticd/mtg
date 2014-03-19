@@ -22,7 +22,9 @@
     "less-middleware": "*",
     "recaptcha": "*",
     "jade": "*",
-    "html5-entities": "*"
+    "html5-entities": "*",
+    "connect-redis": "*",
+    "express-session": "*"
   },
   "devDependencies": {
     "mocha": "*",
