@@ -15,7 +15,7 @@ module.exports.load = function(_config) {
             exp[file.replace('.js', '')] = fn;
           })(_fn(_config));  
         });
-      } catch(err) {}
+      } catch(err) { console.log(err);}
     })(module.exports[method]);
   });
 }

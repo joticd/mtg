@@ -37,7 +37,7 @@ var load_cards_fn = function(f) {
       if(!brojac[card._id]) {
        brojac[card._id] = 1;
        $("<li class='deckLi'><div class='deckLiname'> " + d[c].name + "</ div><input class='dlnInput' type='text' value='1' data-id='" + card._id + "' /></li>")
-           .appendTo("#deckCards")
+           .appendTo("#deckList")
       } else {       
        brojac[card._id]++;          
        if(brojac[card._id] > 4 && card.type != 'land') brojac[card._id] = 4;
