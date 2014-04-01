@@ -26,10 +26,5 @@
     "connect-redis": "*",
     "express-session": "*"
   },
-  "devDependencies": {
-    "mocha": "*",
-    "zombie": "*",
-    "q": "*"
-  },
   "author": "joticd"
 }
