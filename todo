@@ -1,0 +1,10 @@
+
+-lastmove ruta (prosledi joj se matchid)
+-vrati vreme poslednjeg poteza
+- automatski se refreshuje svaki put kad se pozove ona metoda u match.js u
+- source folderu
+
+-get ruta match.js = ono sto je sada board (tekstualni podaci)
+-get ruta board prikazuje tablu
+
+-tabla treba da ima delove (crtamo ih tabelama)

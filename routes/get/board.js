@@ -19,8 +19,17 @@ matches.findOne({ "matchid" : matchid }).complete(function(e, m) {
  if (m == null) {
   var p2_fn = function() {
    users.findOne({ "username" : p2_username }, function(er, user) {
+    if (!user){
+    res.send("user is null");
+    return;
+    };
     var deckid = user.decks[p2_deckindex];
     decks.findOne({ "_id" : deckid }, function(er, deck) {
+     if (!deck){
+      res.send("deck is null");
+      return;
+      };
+                 
      var p2_deck = [];
      for(var i in deck.cards) {
       var c = deck.cards[i];
@@ -50,10 +59,20 @@ matches.findOne({ "matchid" : matchid }).complete(function(e, m) {
   };
 
   users.findOne({ "username" : p1_username }, function(er, user) {
+    if (!user){
+    res.send("user is null");
+    return;
+    };
+
     var deckid = user.decks[p1_deckindex];
     decks.findOne({ "_id" : deckid }, function(er, deck) {
      var p1_deck = [];
-     for(var i in deck.cards) {
+     if (!deck){
+      res.send("deck is null");
+      return;
+      };
+
+       for(var i in deck.cards) {
       var c = deck.cards[i];
       for(var broj = 0; broj < c; broj++) {
        p1_deck.push(i);
