@@ -1,0 +1,14 @@
+extends base
+
+block title
+ title= "template"
+
+block css-plugins
+
+block js-plugins
+ script(src="js/test.js")
+ each test in tests
+  script(src="js/tests/" + test)
+
+block content
+ #tests
