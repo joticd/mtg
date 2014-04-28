@@ -1,0 +1,9 @@
+{
+	"require": [ "Card.js" ],
+	"mock": {
+		"getCard" : {
+			"name" : "ABC",
+			"type" : "XYZ"	
+		}
+	}
+}

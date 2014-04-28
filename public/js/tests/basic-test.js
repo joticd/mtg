@@ -5,7 +5,7 @@ $(function() {
 
     var x = {};
     expect(x.a).toBeUndefined();
-    expect(5).toBeLessThan(8);
+    expect(5).toBeLessThan(98);
     expect(7).toBeGreaterThan(3);
     expect("abc").toMatch(/a.*/);
   });

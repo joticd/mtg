@@ -4,11 +4,30 @@ block title
  title= "template"
 
 block css-plugins
+ link(rel="stylesheet", href="style/test.css")
 
 block js-plugins
+ each req in requires
+  script(src="js/" + req)
  script(src="js/test.js")
  each test in tests
   script(src="js/tests/" + test)
+ script.
+  var mock = !{JSON.stringify(mock)};
+  var Mocks = {};
+
+  for(var _j in mock) {
+    (function(j) {
+      for(var _i in mock[j]) {
+        (function(i) {
+          Mocks[i] = function(callback){
+           callback(mock[j][i]);
+          }
+        })(_i);
+      }
+    })(_j);
+  }
 
 block content
+ 
  #tests
