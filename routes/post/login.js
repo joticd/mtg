@@ -7,9 +7,11 @@ x.check(req.body.username, req.body.password, function(result) {
    req.session.userid = user._id;
    result = (result != null ? "true" : "false"); 
    res.send(result);
+   console.log(req.session);
   });
  } else {
   result = (result != null ? "true" : "false");
-  res.send(result);
+  console.log(result);
+  res.send(result);  
  }
 });

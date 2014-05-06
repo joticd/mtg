@@ -24,7 +24,7 @@ var Expectation = function (value) {
  this.toBe = function(b) {
   return this.testIt(b, value == b);
  }
- 
+
  this.toBeUndefined = function(){
   return this.testIt("undefined", value == undefined);
  }

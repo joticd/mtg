@@ -19,15 +19,8 @@ var tick = function() {
               $.getJSON('get_card', {
                 id : idd.replace(/_.*/, "")
               }, function(card) {
-                mojeKarte[idd] = card;
-                console.log("pojedinacno ", idd, mojeKarte);
-                mojeKarte[idd]._element = $("<img class='karta' src='" + card.image + "' />");
-                mojeKarte[idd]._state = {
-                  tapped : false,
-                  flipped : false,
-                  facedown : false
-                };
-                $("body").append(mojeKarte[idd]._element);              
+                mojeKarte[idd] = new Card(card);
+                $("body").append(mojeKarte[idd].element);              
               });
             }
           })(k);

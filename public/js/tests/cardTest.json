@@ -3,7 +3,9 @@
 	"mock": {
 		"getCard" : {
 			"name" : "ABC",
-			"type" : "XYZ"	
+			"type" : "XYZ",
+			"place" : "hand",
+			"state" : { "flip" : 0, "tap" : 0, "faceDown" : 0 }
 		}
 	}
 }
