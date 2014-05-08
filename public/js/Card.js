@@ -1,12 +1,4 @@
 
-var Places = {
-	Hand : 0,
-	Battlefield : 1,
-	Graveyard : 2,
-	Library : 3,
-	Exile : 4
-}
-
 var Cards = {};
 
 var Card = function(template) {
@@ -14,16 +6,36 @@ var Card = function(template) {
  this.name = template.name || "";
  this.type = template.type || "";
  this.image = template.image || "";
+ 
  if(this.image) {
-  this.element = $("<img class='karta' src='" + this.image + "' />");
+  this.element = $("<div class='full-karta' data-id='" + this.id + "'><img class='karta' src='" + this.image + "' /><img class='poledjina' src='/img/back.jpg' /></div>");
  }
- this.place = Places.Library;
+
+ this.place = "";
  this.state = {
 	"flip" : 0, 
 	"tap" : 0, 
 	"faceDown" : 0 
  };
 
+ this.in = function(z) {
+  this.place = z;
+  this.element
+   .removeClass(!Zone.decked[z] ? "decked" : "not-decked")
+   .addClass(Zone.decked[z] ? "decked" : "not-decked");
+
+  if(Zone.faceDown[z]) {
+   this.element.find('.karta').fadeOut();
+   this.element.find('.poledjina').fadeIn();   
+  } else {
+   this.element.find('.karta').fadeIn();
+   this.element.find('.poledjina').fadeOut();
+  } 
+
+  // pomeri u tu zonu  
+  return this;
+ }
+ 
  this.tap = function() {
    this.state.tap = !this.state.tap;
  }

@@ -1,0 +1,25 @@
+connected to: 127.0.0.1
+all dbs
+DATABASE: taraba	 to 	dump/taraba
+	taraba.obicna to dump/taraba/obicna.bson
+		 2 objects
+	taraba.system.indexes to dump/taraba/system.indexes.bson
+		 5 objects
+	taraba.geo to dump/taraba/geo.bson
+		 3 objects
+	taraba.polje to dump/taraba/polje.bson
+		 0 objects
+DATABASE: magic	 to 	dump/magic
+	magic.users to dump/magic/users.bson
+		 2 objects
+	magic.system.indexes to dump/magic/system.indexes.bson
+		 5 objects
+	magic.cards to dump/magic/cards.bson
+		 2 objects
+	magic.decks to dump/magic/decks.bson
+		 2 objects
+	magic.matches to dump/magic/matches.bson
+		 1 objects
+	magic.system.js to dump/magic/system.js.bson
+		 1 objects
+DATABASE: *	 to 	dump/*
